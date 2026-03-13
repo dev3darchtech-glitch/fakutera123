@@ -1,0 +1,27 @@
+import React from "react";
+
+const IcAdd = (props) => {
+  return (
+    <svg
+      id="Layer_1"
+      enableBackground="new 0 0 512 512"
+      viewBox="0 0 512 512"
+      height={props.height}
+      width={props.width}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="m256 0c-141.2 0-256 114.8-256 256s114.8 256 256 256 256-114.8 256-256-114.8-256-256-256z"
+        fill="#4bae4f"
+        fillRule="evenodd"
+      />
+      <path
+        d="m116 279.6v-47.3c0-4.8 3.9-8.8 8.8-8.8h98.9v-98.8c0-4.8 3.9-8.8 8.8-8.8h47.3c4.8 0 8.7 3.9 8.7 8.8v98.9h98.8c4.8 0 8.8 3.9 8.8 8.8v47.3c0 4.8-3.9 8.7-8.8 8.7h-98.9v98.8c0 4.8-3.9 8.8-8.7 8.8h-47.3c-4.8 0-8.8-3.9-8.8-8.8v-98.9h-98.8c-4.9.1-8.8-3.9-8.8-8.7z"
+        fill="#fff"
+      />
+    </svg>
+  );
+};
+
+export default IcAdd;

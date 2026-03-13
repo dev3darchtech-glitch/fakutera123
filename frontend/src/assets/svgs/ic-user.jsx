@@ -1,0 +1,54 @@
+import React from "react";
+
+const IcUser = (props) => {
+  return (
+    <svg
+      {...props}
+      style={{
+        minWidth: "2.4rem",
+      }}
+      id="Layer_1"
+      enableBackground="new 0 0 100 100"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <linearGradient id="lg1">
+        <stop offset="0" stopColor="#97e0ff" />
+        <stop offset="1" stopColor="#1075ff" />
+      </linearGradient>
+
+      <linearGradient
+        id="SVGID_1_"
+        gradientUnits="userSpaceOnUse"
+        x1="9.493"
+        x2="101.51"
+        y1="-13.56"
+        y2="87.28"
+        xlinkHref="#lg1"
+      />
+
+      <linearGradient
+        id="SVGID_00000117660450743544967070000010266099267374804669_"
+        gradientUnits="userSpaceOnUse"
+        x1="-17.858"
+        x2="74.159"
+        y1="11.398"
+        y2="112.238"
+        xlinkHref="#lg1"
+      />
+
+      <circle cx="50.038" cy="30.873" r="24.907" fill="url(#SVGID_1_)" />
+
+      <path
+        d="m92.2233124 94.0343018h-84.4676357c-3.3126221 0-5.7597651-3.0184708-5.1668072-6.2775879
+        3.7829924-20.7927628 23.6472965-28.0247422 47.4440704-28.0247422
+        23.8928719 0 43.816021 7.2933578 47.3936348 28.254982
+        .5415497 3.1730194-1.9843597 6.0473481-5.2032623 6.0473481z"
+        fill="url(#SVGID_00000117660450743544967070000010266099267374804669_)"
+      />
+    </svg>
+  );
+};
+
+export default IcUser;

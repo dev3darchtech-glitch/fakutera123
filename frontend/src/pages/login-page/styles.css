@@ -1,0 +1,370 @@
+#login {
+  width: 100dvw;
+  min-height: 100dvh;
+  overflow: hidden;
+
+  background-image: url("https://storage.123fakturera.se/public/wallpapers/sverige43.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ================================ Header ================================ */
+.login__header {
+  width: 100%;
+  max-width: 148rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.login__header-main {
+  flex: 1;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login__header-main img {
+  height: 3.2rem;
+}
+
+.login__header-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.login__header-nav a {
+  padding: 0 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ================================ Content ================================ */
+.login__content {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.login__content-form {
+  background-color: #fff;
+  border-radius: 4rem;
+  padding: 2rem 5rem 3rem 5rem;
+  max-width: 66rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.login__content-form h2 {
+  color: #ff0000;
+  font-size: 4.6rem;
+  font-weight: 700;
+}
+
+.login__content-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  font-size: 1.7rem;
+}
+
+.login__content-group label {
+  font-weight: 500;
+  color: #000;
+}
+
+.login__content-group p {
+  color: #ff0000;
+}
+
+.login__content-group input {
+  width: 100%;
+  height: 5rem;
+  border-radius: 4rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  font-size: 1.7rem;
+  border: 1px solid #ccc;
+}
+
+.login__content-pass {
+  position: relative;
+  width: 100%;
+}
+
+.login__content-pass input {
+  padding-right: 4.6rem;
+}
+
+.login__content-pass--icon {
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.login__content-pass--icon img {
+  height: 2.4rem;
+  margin-bottom: -0.5rem;
+}
+
+.login__content-btn {
+  background: #07a31f;
+  padding: 1.6rem 4rem;
+  max-width: 27rem;
+  width: 100%;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.login__content-other {
+  width: 100%;
+  max-width: 35rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.login__content-other a {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* ================================ Footer ================================ */
+.login__footer {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.login__footer-top {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #fff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.login__footer-top p {
+  font-weight: 600;
+  font-size: 3.4rem;
+}
+
+.login__footer-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.login__footer-nav a {
+  padding: 0 2.4rem;
+  font-size: 1.7rem;
+  color: #fff;
+}
+
+.login__footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ================================ Responsive ================================ */
+
+@media (max-width: 1280px) {
+  /* ================================ Header ================================ */
+  .login__header {
+    width: 75%;
+  }
+
+  .login__header-nav {
+    background: #fff;
+    margin-top: 4.8rem;
+    width: 30rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 0;
+    transition: all 0.5s ease;
+    visibility: hidden;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    flex-direction: column;
+  }
+
+  .login__header-nav.login__header-nav--show {
+    height: 36rem;
+    visibility: visible;
+  }
+
+  .login__header-nav a {
+    padding: 2.4rem 3.2rem;
+    color: #000;
+    transition: all 0.3s ease;
+  }
+
+  .login__header-nav a:hover {
+    background: #cccccc69;
+  }
+  /* ================================ Content ================================ */
+
+  /* ================================ Footer ================================ */
+}
+
+@media (max-width: 992px) {
+  /* ================================ Header ================================ */
+  .login__header-nav a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .login__header-nav.login__header-nav--show {
+    height: 34rem;
+    visibility: visible;
+  }
+
+  /* ================================ Content ================================ */
+
+  .login__content-form {
+    max-width: 68rem;
+  }
+
+  .login__content-form h2 {
+    font-size: 4rem;
+  }
+
+  .login__content-group {
+    font-size: 1.6rem;
+  }
+
+  .login__content-group input {
+    height: 4.4rem;
+    font-size: 1.6rem;
+  }
+
+  .login__content-pass--icon img {
+    height: 2rem;
+    margin-bottom: -0.3rem;
+  }
+
+  .login__content-btn {
+    font-size: 1.6rem;
+  }
+
+  .login__content-other a {
+    font-size: 1.6rem;
+  }
+
+  /* ================================ Footer ================================ */
+  .login__footer {
+    font-size: 1.6rem;
+  }
+
+  .login__footer-top p {
+    font-size: 3rem;
+  }
+
+  .login__footer-nav a {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ================================ Header ================================ */
+
+  /* ================================ Content ================================ */
+
+  .login__content-form {
+    padding: 3rem 2rem;
+  }
+
+  .login__content-form h2 {
+    font-size: 3rem;
+  }
+
+  .login__content-group {
+    font-size: 1.5rem;
+  }
+
+  .login__content-group input {
+    font-size: 1.5rem;
+  }
+
+  .login__content-btn {
+    font-size: 1.5rem;
+  }
+
+  .login__content-other a {
+    font-size: 1.5rem;
+  }
+
+  /* ================================ Footer ================================ */
+  .login__footer-top {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .login__footer {
+    font-size: 1.5rem;
+  }
+
+  .login__footer-top p {
+    font-size: 2.8rem;
+  }
+
+  .login__footer-nav a {
+    font-size: 1.5rem;
+    padding: 0 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ================================ Header ================================ */
+  .login__header-nav {
+    width: 20rem;
+  }
+  /* ================================ Content ================================ */
+
+  /* ================================ Footer ================================ */
+}

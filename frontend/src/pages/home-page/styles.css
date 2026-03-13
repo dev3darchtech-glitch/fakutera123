@@ -1,0 +1,296 @@
+#home {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 3rem;
+  padding-left: 2rem;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ================================ Header ================================ */
+.home__header {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+/* ================================ Filter ================================ */
+.home__filter {
+  width: 100%;
+  max-width: 28rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.home__filter-input {
+  width: 100%;
+  position: relative;
+}
+
+.home__filter-input input {
+  width: 100%;
+
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  padding: 0 4rem 0 2rem;
+
+  font-size: 1.5rem;
+}
+
+.home__filter-icon {
+  position: absolute;
+  right: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ================================ Feature ================================ */
+.home__feature {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.home__feature-item {
+  height: fit-content;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.6rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__feature-item p {
+  color: #afafaf;
+  font-size: 1.4rem;
+}
+
+/* ================================ Table ================================ */
+.home__table {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s ease;
+
+  display: grid;
+  row-gap: 0rem;
+  column-gap: 0.8rem;
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 2fr)
+    minmax(0, 0.6fr)
+    minmax(0, 0.7fr)
+    minmax(0, 0.9fr)
+    minmax(0, 0.7fr)
+    minmax(0, 2fr)
+    30px;
+}
+
+.home__table-header {
+  font-size: 1.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.home__table-icon {
+  cursor: pointer;
+
+  transform: rotate(90deg);
+  transition: all 0.4s ease;
+}
+
+.home__table-icon.home__table-icon--active {
+  transform: rotate(-90deg);
+}
+
+.home__table-content {
+  font-size: 1.4rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 1.2rem;
+}
+
+.home__table-arrow {
+  height: 100%;
+  position: absolute;
+  left: -2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.4rem;
+}
+
+.home__table-sel {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home__table-option {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__table-arrow--edit {
+  transform: rotate(180deg);
+}
+
+.home__table-edit {
+  margin-top: 1rem;
+}
+
+.home__table-edit input {
+  width: 100%;
+  padding: 0 0.4rem;
+  border-bottom: 1px solid #ccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+
+  font-size: 1.5rem;
+}
+
+.home__table-skeleton {
+  width: 100%;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+
+  background: linear-gradient(90deg, #eeeeee 25%, #dddddd 37%, #eeeeee 63%);
+
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* ================================ Responsive ================================ */
+
+@media (max-width: 1280px) {
+  /* ================================ Header ================================ */
+
+  /* ================================ Filter ================================ */
+
+  /* ================================ Feature ================================ */
+  .home__feature-item {
+    width: 10rem;
+  }
+
+  .home__feature-item p {
+    display: none;
+  }
+
+  /* ================================ Table ================================ */
+  .home__table {
+    grid-template-columns:
+      minmax(0, 0.6fr)
+      minmax(0, 2fr)
+      minmax(0, 0.6fr)
+      minmax(0, 0.8fr)
+      minmax(0, 0.7fr)
+      30px;
+  }
+
+  .home__table-col-2,
+  .home__table-col-6 {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #home {
+    padding-right: 2rem;
+  }
+
+  /* ================================ Header ================================ */
+
+  /* ================================ Filter ================================ */
+
+  /* ================================ Feature ================================ */
+
+  /* ================================ Table ================================ */
+}
+
+@media (max-width: 768px) {
+  /* ================================ Header ================================ */
+  .home__header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* ================================ Filter ================================ */
+  .home__filter {
+    max-width: 100dvw;
+  }
+
+  /* ================================ Feature ================================ */
+  .home__feature {
+    justify-content: space-between;
+  }
+
+  /* ================================ Table ================================ */
+  .home__table {
+    grid-template-columns:
+      minmax(0, 2fr)
+      minmax(0, 0.8fr)
+      30px;
+  }
+
+  .home__table-col-0,
+  .home__table-col-4,
+  .home__table-col-5 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    padding-right: 1rem;
+  }
+
+  /* ================================ Header ================================ */
+
+  /* ================================ Filter ================================ */
+
+  /* ================================ Feature ================================ */
+  .home__feature-item {
+    max-width: 10rem;
+    width: 100%;
+  }
+  /* ================================ Table ================================ */
+}
